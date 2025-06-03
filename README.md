@@ -1,11 +1,34 @@
 # 🧩 React Internship Assignment – Login + Dashboard
 
-## 📌 Overview
+## 🌐 Introduction
 
-This is a simple React application created as part of an internship assignment. The app has two main pages:
+**PokéWorld Dashboard** is a modern, responsive web application built using **React** and **Recharts**, designed to explore, analyze, and interact with Pokémon data. Developed as part of an internship assignment, the project showcases essential front-end development skills including:
 
-- **Login Page**: Accepts any non-empty email/password, stores login state in `localStorage`, and redirects to the dashboard.
-- **Dashboard Page**: Protected route that fetches a list of 10 Pokémon from the [PokeAPI](https://pokeapi.co/), displays them in a 2-column card layout with images and hover effects. Includes a logout button that clears login state.
+- API data handling
+- Protected routing
+- Search, sort, and pagination
+- Data visualization with charts
+- Clean UI/UX principles
+
+The goal was to create a functional, interactive dashboard using real-time Pokémon data from the PokéAPI, with a focus on usability, performance, and code clarity.
+---
+## 🌟 Features
+
+- 🔐 Login authentication with localStorage check
+- 📋 Pokémon table view with:
+  - 300 Pokémon
+  - Search by name or type
+  - Sortable columns (Name, Type, Height)
+  - Pagination (50 per page)
+  - “View” button to show detailed stats in a modal
+- 📊 Pie chart showing Pokémon type distribution (with multi-type handling)
+- ⚡ Protected routes with navigation bar
+- 🎨 Styled layout with responsive design and theme
+
+---
+## 🔐 Login Credentials
+
+You can enter **any email and password** to login — this demo uses client-side validation only.
 
 ---
 
@@ -22,49 +45,18 @@ Start the app:
 
 Open the browser at: http://localhost:5173/
 
-🔧 Features
-✅ React functional components with hooks (useState, useEffect)
-
-✅ react-router-dom for routing and route protection
-
-✅ LocalStorage used to manage login state
-
-✅ PokeAPI integration to fetch dynamic Pokémon data
-
-✅ Responsive layout with 2 Pokémon per row
-
-✅ Hover effect and styled logout button
-
-✅ Centered login form with clean design
-
 📁 Folder Structure
 src/
 ├── pages/
-│   ├── Login.jsx          # Login form component
-│   └── Dashboard.jsx      # Protected dashboard with Pokémon cards
-├── App.jsx                # Routing logic
-├── main.jsx               # Entry point
-├── global.css             # Optional global styles
-├── README.md              # Project documentation
+│   ├── Login.jsx
+│   ├── Dashboard.jsx
+│   ├── TableView.jsx
+│   └── PieChartPage.jsx
+├── components/
+│   └── ProtectedRoute.jsx
+├── App.jsx
+└── main.jsx
 
-💡 What I Learned
-As a beginner in React, this project helped me learn:
-
-React app setup using Vite
-
-JSX and component-based structure
-
-State and effect hooks (useState, useEffect)
-
-Routing using react-router-dom
-
-Fetching data from external APIs
-
-Using localStorage for client-side persistence
-
-Basic inline and CSS styling in React
-
-Conditional rendering and route protection
 
 🙋‍♂️ Notes
 This was my first complete app using React.
@@ -74,9 +66,13 @@ The code is kept simple and beginner-friendly.
 The Pokémon displayed are fetched live from the PokeAPI.
 
 🛠️ Tech Stack
-Frontend: React + Vite
+React + Vite
 
-Styling: Inline CSS + Flex/Grid layout
+React Router
+
+Recharts
+
+Vanilla CSS + Inline styling
 
 API: https://pokeapi.co
 

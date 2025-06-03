@@ -17,7 +17,7 @@ function Dashboard() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
+                const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=300");
                 const data = await res.json();
                 setPokemonList(data.results);
             } catch (error) {
@@ -35,7 +35,7 @@ function Dashboard() {
 
     return (
         <div style={{
-            padding: "2rem", minHeight: "100vh", backgroundColor: "rgba(34, 29, 61, 0.86)", boxSizing: "border-box",
+            padding: "2rem", minHeight: "100vh", boxSizing: "border-box",
             overflowX: "hidden",}}>
             <div
                 style={{

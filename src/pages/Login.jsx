@@ -14,6 +14,12 @@ function Login() {
             return;
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            setErrorMessage('Please enter a valid email address.');
+            return;
+        }
+
         // Save login state
         localStorage.setItem("isLoggedIn", "true");
 
@@ -23,9 +29,21 @@ function Login() {
 
     return (
         <div style={{
+            backgroundColor: "rgba(57, 130, 178, 0.86)",       // dark background
+            color: "white",                
+            minHeight: "100vh",            
+            display: "flex",               
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "2rem", }}>
+            <h1 style={{ marginBottom: "2rem", color: "#ffcb05", fontFamily: "Inter, sans-serif" }}>
+                Welcome to PokéWorld
+            </h1>
+        <div style={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "rgba(57, 130, 178, 0.86)",
+            // backgroundColor: "rgba(57, 130, 178, 0.86)",
             alignItems: "center",
             height: "100%",
             width: "100vw",
@@ -49,6 +67,7 @@ function Login() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
+                            placeholder="you@example.com"
                             style={{ width: "100%", padding: "0.5rem", marginTop: "0.3rem" }}
                         />
                     </div>
@@ -75,6 +94,7 @@ function Login() {
                     </button>
                 </form>
             </div>
+        </div>
         </div>
     );
 }
