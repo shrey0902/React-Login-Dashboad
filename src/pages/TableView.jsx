@@ -1,7 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-// Removed PieChart, Pie, Tooltip, Legend, Cell, ResponsiveContainer imports from 'recharts'
 
-// Removed COLORS constant
 
 function TableView() {
     const [pokemonList, setPokemonList] = useState([]);
@@ -129,9 +127,7 @@ function TableView() {
         pageNumbers.push(i);
     }
 
-    // Removed Pie Chart Data Processing (typeChartData useMemo)
-
-    // Removed CustomTooltip component
+    
 
     return (
         <div style={{ padding: "2rem", backgroundColor: "black", color: "white", fontFamily: "Inter, sans-serif", minHeight: "100vh" }}>
@@ -146,17 +142,16 @@ function TableView() {
                         padding: "0.5rem",
                         borderRadius: "5px",
                         border: "1px solid #ccc",
-                        color: "black", // Ensure text is visible on light input background
-                        width: "clamp(150px, 30%, 300px)", // Responsive width for search bar
+                        color: "black", 
+                        width: "clamp(150px, 30%, 300px)", 
                     }}
                 />
             </div>
 
             {loading ? (
-                <p>Loading 300 Pokémon...</p>
+                <div className="spinner"></div>
             ) : (
                 <>
-                    {/* Removed Pie Chart Section */}
 
                     {/* Table Section */}
                     <table
@@ -311,6 +306,7 @@ function TableView() {
                         color: "white",
                         position: "relative",
                         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                        animation: "fadeIn 0.3s ease-out",
                     }}>
                         <button
                             onClick={closeModal}

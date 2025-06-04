@@ -86,21 +86,14 @@ function Dashboard() {
                         return (
                             <div
                                 key={index}
-                                style={{
-                                    backgroundColor: "#fff",
-                                    padding: "1rem",
-                                    borderRadius: "8px",
-                                    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
-                                    width: "150px",
-                                    textAlign: "center",
-                                }}
+                                className="pokemon-card"
                             >
                                 <img
                                     src={imageUrl}
                                     alt={pokemon.name}
                                     style={{ width: "80px", height: "80px", marginBottom: "0.5rem" }}
                                 />
-                                <strong style={{ color: "#333" }}>
+                                <strong style={{ color: "white" }}>
                                     {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
                                 </strong>
                             </div>

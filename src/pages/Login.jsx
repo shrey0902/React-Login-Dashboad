@@ -29,7 +29,7 @@ function Login() {
 
     return (
         <div style={{
-            backgroundColor: "rgba(57, 130, 178, 0.86)",       // dark background
+            backgroundColor: "rgba(199, 33, 7, 0.86)",       // dark background
             color: "white",                
             minHeight: "100vh",            
             display: "flex",               
